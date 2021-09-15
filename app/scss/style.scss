@@ -55,7 +55,11 @@ button {
 	background-color: rgb(5, 5, 5);
 	color: var(--main-color-light);
 
-
+	&.hide {
+		height: 0;
+		visibility: hidden;
+		padding: 0;
+	}
 
 	&__text {
 		font-weight: 500;
@@ -158,6 +162,7 @@ button {
 	height: 40px;
 	margin-left: 15px;
 	position: relative;
+	z-index: 999;
 
 	&::before,
 	&::after,
@@ -201,15 +206,6 @@ button {
 	}
 }
 
-/* #login{
-	&:hover{
-		.header-popup{
-			visibility: visible;
-			z-index: 99;
-		}
-	}
-} */
-
 .header-popup {
 	display: flex;
 	flex-direction: column;
@@ -225,6 +221,11 @@ button {
 	right: 20px;
 	z-index: -1;
 	visibility: hidden;
+
+	&.show {
+		z-index: 99;
+		visibility: visible;
+	}
 
 	&__btn {
 		display: flex;
@@ -462,12 +463,22 @@ button {
 			flex-direction: column;
 			justify-content: start;
 			left: -100%;
-			// left: 0;
 			top: -90px;
 			height: 100vh;
-			// width: 100vw;
+			visibility: hidden;
 			background-color: #fff;
 			padding-top: 100px;
+			transition: all ease .6s;
+
+			&.show {
+				left: 0;
+				width: 100%;
+				visibility: visible;
+				overflow-y: auto;
+				.header-nav__btn{
+					display: flex;
+				}
+			}
 		}
 
 		&__line+li {
@@ -507,9 +518,14 @@ button {
 	height: 100vh;
 	padding: 58px 0 17px 0;
 	background-color: rgba(0, 0, 0, .5);
-	// z-index: -1;
-	// visibility: hidden;
+	z-index: -1;
+	visibility: hidden;
 	overflow-y: auto;
+
+	&.show {
+		z-index: 999;
+		visibility: visible;
+	}
 }
 
 .modal-form {
@@ -555,7 +571,8 @@ button {
 		font-size: 16px;
 		line-height: 18px;
 		color: var(--label-color);
-		&::after{
+
+		&::after {
 			content: '*';
 			margin-left: 3px;
 		}
@@ -611,10 +628,12 @@ button {
 
 	.modal-form {
 		padding: 30px;
-		&__name{
+
+		&__name {
 			flex-wrap: wrap;
 		}
-		&__label{
+
+		&__label {
 			max-width: none;
 			margin-left: 0 !important;
 		}
