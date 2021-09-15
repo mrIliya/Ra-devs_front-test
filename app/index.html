@@ -40,13 +40,28 @@
 				</span>
 				<img class="header-bot__btn-img" src="./images/shopping-cart.png" alt="cart-logo">
 			</button>
-			<button class="header-bot__btn" type="button">
+			<button class="header-bot__btn" type="button" id="login">
 				<span class="header-bot__btn-text">log in</span>
 				<img class="header-bot__btn-img" src="./images/user.png" alt="user-logo">
 			</button>
+
 			<button class="header-burger" type="button">
 				<span></span>
 			</button>
+			<!-- header burger -->
+
+			<div class="header-popup">
+				<button class="header-popup__btn">
+					<span class="header-popup__text">UPLOAD FILE</span>
+					<img class="header-popup__img" src="./images/upload.png" alt="icon">
+				</button>
+				<button class="header-popup__btn">
+					<span class="header-popup__text">ORDER TRACKING</span>
+					<img class="header-popup__img" src="./images/truck.png" alt="icon">
+				</button>
+				<button class="header-popup__btn header-popup__login">LOGIN</button>
+				<button class="header-popup__btn header-popup__register">REGISTER</button>
+			</div>
 		</div>
 		<!-- header bot -->
 
@@ -82,6 +97,165 @@
 		</nav>
 	</header>
 
+	<section class="main">
+		<div class="breadcrumbs">
+			<a class="breadcrumbs__link" href="#">
+				<img class="breadcrumbs__icon" src="./images/chevron-left.png" alt="icon">
+				<span class="breadcrumbs__text">Back</span>
+			</a>
+		</div>
+		<div class="main__inner">
+			<div class="main-filter">
+				<ul class="main-filter__list">
+					<button class="main-filter__btn active">
+						<img class="main-filter__icon" src="./images/user-2.png" alt="logo">
+						<span class="main-filter__text">PROFILE</span>
+					</button>
+					<button class="main-filter__btn">
+						<img class="main-filter__icon" src="./images/credit-card.png" alt="logo">
+						<span class="main-filter__text">PAYMENT</span>
+					</button>
+					<button class="main-filter__btn">
+						<img class="main-filter__icon" src="./images/truck.png" alt="logo">
+						<span class="main-filter__text">ORDERS</span>
+					</button>
+					<button class="main-filter__btn">
+						<img class="main-filter__icon" src="./images/file-text.png" alt="logo">
+						<span class="main-filter__text">INVOICES</span>
+					</button>
+					<button class="main-filter__btn">
+						<img class="main-filter__icon" src="./images/upload.png" alt="logo">
+						<span class="main-filter__text">UPLOADS</span>
+					</button>
+					<button class="main-filter__btn">
+						<img class="main-filter__icon" src="./images/heart.png" alt="logo">
+						<span class="main-filter__text">WISHLIST</span>
+					</button>
+					<button class="main-filter__btn main-filter__logout">
+						<span class="main-filter__text">LOG OUT</span>
+						<img class="main-filter__icon" src="./images/log-out.png" alt="logo">
+					</button>
+				</ul>
+			</div>
+			<div class="main-info">
+				<div class="main-info__user">
+					<h2 class="main-info__title">Anna K</h2>
+					<span class="main-info__email">anna.k.workmail@gmail.com</span>
+				</div>
+				<div class="main-info__tabs">
+					<!-- ---main tab item ---- -->
+					<article class="main-tab">
+						<div class="main-tab__name">
+							<span>Shipping aDDRESS</span>
+							<img class="main-tab__open" src="./images/chevron.png" alt="icon">
+						</div>
+						<div class="main-tab__content">
+							<div class="main-tab__top">
+								<input class="main-tab__check" type="checkbox">
+								<p class="main-tab__text">1201 Airport Fwy, Irving, TX 75062, USA</p>
+								<button class="main-tab__btn" type="button">
+									<img class="main-tab__icon" src="./images/edit.png" alt="icon">
+								</button>
+								<button class="main-tab__btn" type="button">
+									<img class="main-tab__icon" src="./images/trash.png" alt="icon">
+								</button>
+							</div>
+							<button class="main-tab__button" type="button">ADD ADDRESS</button>
+						</div>
+					</article>
+					<!-- ---main tab item ---- -->
+					<article class="main-tab">
+						<div class="main-tab__name">
+							<span>Shipping aDDRESS</span>
+							<img class="main-tab__open" src="./images/chevron.png" alt="icon">
+						</div>
+						<div class="main-tab__content">
+							<div class="main-tab__top">
+								<input class="main-tab__check" type="checkbox">
+								<p class="main-tab__text">1201 Airport Fwy, Irving, TX 75062, USA</p>
+								<button class="main-tab__btn" type="button">
+									<img class="main-tab__icon" src="./images/edit.png" alt="icon">
+								</button>
+								<button class="main-tab__btn" type="button">
+									<img class="main-tab__icon" src="./images/trash.png" alt="icon">
+								</button>
+							</div>
+							<button class="main-tab__button" type="button">ADD ADDRESS</button>
+						</div>
+					</article>
+					<!-- ---main tab item ---- -->
+					<!-- <article class="main-tab">
+						<div class="main-tab__name">
+							<span>Shipping aDDRESS</span>
+							<img class="main-tab__open" src="./images/chevron.png" alt="icon">
+						</div>
+						<div class="main-tab__content">
+							<div class="main-tab__top">
+								<input class="main-tab__check" type="checkbox">
+								<p class="main-tab__text">1201 Airport Fwy, Irving, TX 75062, USA</p>
+								<button class="main-tab__btn" type="button">
+									<img class="main-tab__icon" src="./images/edit.png" alt="icon">
+								</button>
+								<button class="main-tab__btn" type="button">
+									<img class="main-tab__icon" src="./images/trash.png" alt="icon">
+								</button>
+							</div>
+							<button class="main-tab__button" type="button">ADD ADDRESS</button>
+						</div>
+					</article> -->
+					<!-- ---main tab item ---- -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="modal">
+		<form class="modal-form">
+			<div class="modal-form__inner">
+
+
+				<div class="modal-form__name">
+					<label class="modal-form__label">
+						<span class="modal-form__text">First Name</span>
+						<input class="modal-form__input" type="text" required>
+					</label>
+					<label class="modal-form__label">
+						<span class="modal-form__text">Last Name</span>
+						<input class="modal-form__input" type="text" required>
+					</label>
+				</div>
+
+				<label class="modal-form__label">
+					<span class="modal-form__text">Address</span>
+				</label>
+				<input class="modal-form__input" type="text" required>
+				<label class="modal-form__label">
+					<span class="modal-form__text">Phone Number</span>
+				</label>
+				<input class="modal-form__input" type="text" required>
+
+				<div class="modal-form__adress">
+					<label class="modal-form__label">
+						<span class="modal-form__text">City</span>
+						<input class="modal-form__input" type="text" required>
+					</label>
+					<label class="modal-form__label">
+						<span class="modal-form__text">Country</span>
+						<input class="modal-form__input" type="text" required>
+					</label>
+					<label class="modal-form__label">
+						<span class="modal-form__text">State</span>
+						<input class="modal-form__input" type="text" required>
+					</label>
+					<label class="modal-form__label">
+						<span class="modal-form__text">Zip Code</span>
+						<input class="modal-form__input" type="text" required>
+					</label>
+				</div>
+				<button class="modal-form__btn" type="submit">SAVE</button>
+			</div>
+		</form>
+	</section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="./script/script.js"></script>
