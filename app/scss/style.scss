@@ -21,6 +21,10 @@ body {
 	margin: 0;
 }
 
+.lock{
+	overflow: hidden;
+}
+
 p {
 	margin: 0;
 	padding: 0;
@@ -163,6 +167,7 @@ button {
 	margin-left: 15px;
 	position: relative;
 	z-index: 999;
+	transition: all 1s;
 
 	&::before,
 	&::after,
@@ -174,6 +179,7 @@ button {
 		position: absolute;
 		left: 0;
 		top: 0;
+		transition: all linear .3s;
 	}
 
 	&::after {
@@ -382,6 +388,19 @@ button {
 		font-weight: 600;
 		font-size: 15px;
 		line-height: 27px;
+		cursor: pointer;
+		&.active{
+			.main-tab__open{
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__content{
+		display: none;
+		&.show{
+		display: block;
+		}
 	}
 
 	&__top {

@@ -16,6 +16,9 @@ body {
   font-weight: 400;
   margin: 0; }
 
+.lock {
+  overflow: hidden; }
+
 p {
   margin: 0;
   padding: 0; }
@@ -127,7 +130,8 @@ button {
   height: 40px;
   margin-left: 15px;
   position: relative;
-  z-index: 999; }
+  z-index: 999;
+  transition: all 1s; }
   .header-burger::before, .header-burger::after,
   .header-burger span {
     content: '';
@@ -136,7 +140,8 @@ button {
     background-color: var(--label-color);
     position: absolute;
     left: 0;
-    top: 0; }
+    top: 0;
+    transition: all linear .3s; }
   .header-burger::after {
     bottom: 0;
     top: auto; }
@@ -281,7 +286,14 @@ button {
     border-bottom: 1px solid var(--border-gray);
     font-weight: 600;
     font-size: 15px;
-    line-height: 27px; }
+    line-height: 27px;
+    cursor: pointer; }
+    .main-tab__name.active .main-tab__open {
+      transform: rotate(180deg); }
+  .main-tab__content {
+    display: none; }
+    .main-tab__content.show {
+      display: block; }
   .main-tab__top {
     display: flex;
     justify-content: space-between;
